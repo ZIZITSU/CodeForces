@@ -1,0 +1,31 @@
+#include<iostream>
+
+using namespace std;
+
+
+int main(){
+
+int t, count = 0;
+cin >>  t;
+int x[t],y[t];
+
+for(int i = 0; i<t; i++){
+    cin >> x[i] >> y[i];
+}    
+
+for(int i = 0; i<t; i++){
+    for(int j = 0; j<t; j++){
+        if(x[i] == y[j]){
+            count++;
+        }
+    }    
+}
+
+// if(count == t){
+//     count++;
+// }
+
+cout << count;
+
+
+}
