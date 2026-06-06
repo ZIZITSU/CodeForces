@@ -1,26 +1,33 @@
-#include<iostream>
+#include<bits/stdc++.h>
 
 using namespace std;
 
 int main(){
 
-    int n;
-    cin >> n;
+    int n, l;
 
-    while(n--){
+    cin >> n >> l;
 
-        int a,b,c;
-        cin >> a >> b >> c;
+    vector<int> arr(n);
 
-        if((a+b)==c){
-            cout << "+";
-        }
-        else{
-            cout << "-";
-        }
-
-
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
+
+    sort(arr.begin(), arr.end());
+    
+    float min= INT_MAX;
+
+    for (int i = 0; i < n-1; i++) {
+        float x;
+        x = (arr[i] + arr[i+1])/2;
+
+        if(x<min){
+            min = x;
+        }
+    }
+
+        cout << min << endl;
 
 
 
