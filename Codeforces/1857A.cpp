@@ -7,7 +7,7 @@ int main(){
 
     int t,n;
     cin >> t;
-    
+
     while(t--){
 
         cin >> n;
@@ -20,7 +20,7 @@ int main(){
                 count++;
             }
         }
-
+        
         if(count%2){
             cout<< "NO\n";           
         }
